@@ -15,16 +15,25 @@ public class Main
     public static void main(String[] args)
     {
         // Introduction text   
-        File introduction = new File("rules.txt"); //opens file rules.txt
-        Scanner reader = new Scanner(introduction);
-        
-        while(reader.hasNextLine())
+        try
         {
-            String line = reader.nextLine();
-            System.out.println(line);
+            File introduction = new File("rules.txt"); //opens file rules.txt
+            Scanner reader = new Scanner(introduction);
+
+            while(reader.hasNextLine())
+            {
+                String line = reader.nextLine();
+                System.out.println(line);
+            }
+            reader.close();
+            
+        } catch(FileNotFoundException e)
+        {
+            System.out.println("Welcome to Wordle Java Command Line Version");
+            System.out.println("*******************************************\n");
+            System.out.println("How to play: \nWordle originally created by Josh Wardle, is a game where the player gets 6 chances to guess a 5-letter word,\nthe player can try guessing the word by trying different 5-letter words,\nwhen the player enters a guess, they will be given a hint about how close the word is to the game word. \nIf the game word is: h e l l o \nand Player guesses h o l e s \nthe game will give the following hint \nh at 1 is at the right place\nl at 3 is at the right place\ne is not at the right place, but present in the game word\no is not at the right place but present in the game word. \nJust like that keep guessing and remember you only get 6 chances.\nPlease enter all words in lowercase and they should be a 5-letter word. Enjoy!");
         }
-        reader.close();
-        
+
         Scanner sc = new Scanner(System.in);
 
         int choice = 0;
