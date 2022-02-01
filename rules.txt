@@ -1,0 +1,24 @@
+Welcome to Wordle Java Command Line Version
+*******************************************
+
+How to play:
+
+Wordle is a game originally created by Josh Wardle where the player gets 6 chances to guess a 5-letter word,
+The player can try guessing the word by trying different 5-letter words,
+when the player enters a guess, they will be given a hint about how close the word is to the game word.
+
+Example: 
+If the game word is: h e l l o 
+Player guesses h o l e s 
+
+The game will give the following hint:
+h at 1 is at the right place
+l at 3 is at the right place
+e is not at the right place, but present in the game word
+o is not at the right place but present in the game word.
+
+Just like that keep guessing and remember you only get 6 chances. 
+Please enter all the words in lowercase and all the guesses should be a 5-letter word. 
+Enjoy!
+        
+      
